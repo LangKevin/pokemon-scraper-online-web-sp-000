@@ -30,7 +30,7 @@ class Pokemon
           INSERT INTO pokemon (name, type)
           VALUES (?, ?)
         SQL
-
+        binding.pry
         db.execute(sql, name, type)
         # @id =db.execute("SELECT last_insert_rowid() FROM students")[0][0]
       end
