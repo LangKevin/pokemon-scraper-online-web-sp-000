@@ -16,11 +16,8 @@ class Pokemon
         SQL
         binding.pry
         arr = db.execute(sql, id).first
-        poke = Pokemon.new
-        poke.id = arr[0] 
-        poke.name = arr[1]
-        poke.type = arr[2]
-        poke.db = db
+        poke = Pokemon.new(id: arr[0], name: arr[1], type: arr[2], db: db)
+        poke
         # db.execute(sql, id).map do |row|
           # self.new_from_db(row)
         # end.first
