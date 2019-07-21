@@ -15,6 +15,7 @@ class Pokemon
          FROM pokemon
          where id = ?
         SQL
+        binding.pry
         db.execute(sql, id).first
         # db.execute(sql, id).map do |row|
           # self.new_from_db(row)
