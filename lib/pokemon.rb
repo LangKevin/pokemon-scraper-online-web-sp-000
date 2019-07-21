@@ -28,11 +28,11 @@ class Pokemon
       #   self.update
       # else
         sql = <<-SQL
-          INSERT INTO pokemon (name, type)
-          VALUES (?, ?)
+          INSERT INTO pokemon (name, type, hp)
+          VALUES (?, ?, ?)
         SQL
         # binding.pry
-        db.execute(sql, name, type)
+        db.execute(sql, name, type, 60)
         # @id =db.execute("SELECT last_insert_rowid() FROM students")[0][0]
       # end
     end
