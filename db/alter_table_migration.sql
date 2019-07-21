@@ -1,1 +1,1 @@
-ALTER TABLE pokemon ADD 
+ALTER TABLE pokemon ADD hp 
