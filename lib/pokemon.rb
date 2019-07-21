@@ -16,7 +16,8 @@ class Pokemon
          where id = ?
         SQL
         binding.pry
-        db.execute(sql, id).first
+        arr = db.execute(sql, id).first
+        Pokemon.new(arr[0], arr[1], arr[2], db)
         # db.execute(sql, id).map do |row|
           # self.new_from_db(row)
         # end.first
